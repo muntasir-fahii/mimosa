@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buttonVariants } from "../ui/Button";
 
 const Navbar = () => {
   return (
@@ -6,41 +7,58 @@ const Navbar = () => {
       className="h-20 border-b border-gray
     flex items-center bg-white"
     >
-      <div>
+      <div className="wrapper grid grid-cols-3 gap-20 items-center">
         {/* LEFT NAV */}
         <nav>
-          <ul>
+          <ul className="flex gap-5 ">
             <li>
-              <Link href="/">Link 1</Link>
+              <Link href="/" className="link-item">
+                Link 1
+              </Link>
             </li>
             <li>
-              <Link href="/">Link 2</Link>
+              <Link href="/" className="link-item">
+                Link 2
+              </Link>
             </li>
             <li>
-              <Link href="/">Link 3</Link>
+              <Link href="/" className="link-item">
+                Link 3
+              </Link>
             </li>
           </ul>
         </nav>
         {/* MID NAV */}
         <nav>
-          <ul>
+          <ul className="flex justify-center">
             <li>
-              <Link href="/">Mimosa.</Link>
+              <Link href="/" className="lowercase text-4xl font-bold text-pink">
+                Mimosa.
+              </Link>
             </li>
           </ul>
         </nav>
         {/*  RIGHT NAV */}
         <nav>
           {" "}
-          <ul>
+          <ul className="flex gap-5 justify-end items-center">
             <li>
-              <Link href="/">Link 4</Link>
+              <Link href="/" className="link-item">
+                Link 4
+              </Link>
             </li>
             <li>
-              <Link href="/">Link 5</Link>
+              <Link href="/" className="link-item">
+                Link 5
+              </Link>
             </li>
             <li>
-              <Link href="/user/sign-in">Sign in</Link>
+              <Link
+                href="/user/sign-in"
+                className={buttonVariants({ variant: "ocean" })}
+              >
+                Sign in
+              </Link>
             </li>
           </ul>
         </nav>
