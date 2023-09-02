@@ -22,7 +22,7 @@ const Hero = () => {
             />
           </div>
           <div className='flex h-full w-full items-center'>
-            <h2 className='headline-1 font-bold uppercase'>Discover New</h2>
+            <h2 className='headline-1 font-bold uppercase'>Expose New</h2>
           </div>
         </div>
 

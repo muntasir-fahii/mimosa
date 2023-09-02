@@ -19,7 +19,7 @@ export const buttonVariants = cva(
         success:
           'border-green bg-green text-dark hover:border-green/90 hover:bg-green/90',
         ocean:
-          'border-blue bg-blue text-dark hover:border-blue/90 hover:bg-blue/90',
+          'border-blue bg-blue text-light hover:border-blue/90 hover:bg-blue/90',
         violet:
           'border-violet bg-violet text-white hover:border-violet/90 hover:bg-violet/90',
       },
