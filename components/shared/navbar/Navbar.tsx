@@ -1,12 +1,9 @@
-import { buttonVariants } from '../ui/Button';
+import { buttonVariants } from '../../ui/Button';
 import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <header
-      className='fixed left-0 right-0
-    top-0 z-[100] flex h-20 items-center border-b border-gray bg-white/80 backdrop-blur-lg'
-    >
+    <header className=' flex h-20 items-center border-b border-gray bg-white/80 backdrop-blur-lg'>
       <div className='wrapper grid grid-cols-3 items-center gap-20'>
         {/* LEFT NAV */}
         <nav>
