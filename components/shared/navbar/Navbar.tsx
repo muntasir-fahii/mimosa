@@ -1,11 +1,7 @@
-import { auth } from '@clerk/nextjs';
-import { UserButton } from '@clerk/nextjs';
 import { buttonVariants } from '../../ui/Button';
 import Link from 'next/link';
 
 const Navbar = async () => {
-  const { userId } = await auth();
-
   return (
     <header className=' flex h-20 items-center border-b border-gray bg-white/80 backdrop-blur-lg'>
       <div className='wrapper grid grid-cols-3 items-center gap-20'>
@@ -18,8 +14,8 @@ const Navbar = async () => {
               </Link>
             </li>
             <li>
-              <Link href='/' className='link-item'>
-                Link 2
+              <Link href='/#products' className='link-item'>
+                Products
               </Link>
             </li>
             <li>
@@ -54,16 +50,12 @@ const Navbar = async () => {
               </Link>
             </li>
             <li>
-              {userId ? (
-                <UserButton afterSignOutUrl='/' />
-              ) : (
-                <Link
-                  href='/sign-in'
-                  className={buttonVariants({ variant: 'ocean' })}
-                >
-                  Sign in
-                </Link>
-              )}
+              <Link
+                href='/sign-in'
+                className={buttonVariants({ variant: 'ocean' })}
+              >
+                Sign in
+              </Link>
             </li>
           </ul>
         </nav>
