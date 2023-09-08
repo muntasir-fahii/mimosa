@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { buttonVariants } from '../ui/Button';
 import { fromatCurrency } from '@/utils/formatCurrency';
 
-
 interface ProductItemProps {
   item: productItem;
 }
@@ -12,7 +11,10 @@ interface ProductItemProps {
 const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
   return (
     <div className='flex h-full w-full flex-col gap-5 overflow-hidden rounded-xl border border-gray p-5'>
-      <div className='group h-[15rem] w-full overflow-hidden rounded-lg'>
+      <Link
+        href={`/products/${item.id}`}
+        className='group h-[15rem] w-full overflow-hidden rounded-lg'
+      >
         <Image
           src={item.images[0]}
           alt={item.title}
@@ -21,7 +23,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ item }) => {
           priority
           className='eq h-full w-full object-cover group-hover:scale-125'
         />
-      </div>
+      </Link>
       <div className='flex flex-col gap-2.5'>
         <span className='text-xs font-bold uppercase tracking-widest text-orange'>
           {item.category}
