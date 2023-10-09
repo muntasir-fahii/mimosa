@@ -1,22 +1,22 @@
-import { packageItem } from '@/types/packageItem';
+import { beautyPackageType } from '@/types/beautyPackage';
 import { buttonVariants } from '../ui/Button';
 import { fromatCurrency } from '@/utils/formatCurrency';
 import Image from 'next/image';
 import Link from 'next/link';
 
 interface PackageItemProps {
-  packageItem: packageItem;
+  packageItem: beautyPackageType;
 }
 
 const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
   return (
     <div className='flex w-full flex-col gap-5'>
       <Link
-        href={`/packages/${packageItem.id}`}
+        href={`/packages/${packageItem._id}`}
         className='rou group group h-[15rem] w-full overflow-hidden rounded-xl border border-gray'
       >
         <Image
-          src={packageItem.image}
+          src={packageItem.images[0]}
           alt={packageItem.title}
           height={640}
           width={640}
@@ -36,7 +36,7 @@ const PackageItem: React.FC<PackageItemProps> = ({ packageItem }) => {
         <div className='flex items-center justify-between gap-2.5'>
           <p className='text-2xl'>{fromatCurrency(packageItem.price)}</p>
           <Link
-            href={`/packages/${packageItem.id}`}
+            href={`/packages/${packageItem._id}`}
             className={buttonVariants({ variant: 'violet' })}
           >
             View Details

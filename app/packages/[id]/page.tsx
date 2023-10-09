@@ -1,5 +1,5 @@
 import { data } from '@/data/paclages';
-import { packageItem } from '@/types/packageItem';
+import { packageItem } from '@/types/beautyPackage';
 import PackageDetailsSection from '@/components/package-details/PackageDetailsSection';
 import FooterMini from '@/components/shared/footer/FooterMini';
 import Navbar from '@/components/shared/navbar/Navbar';
